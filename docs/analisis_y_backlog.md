@@ -25,3 +25,18 @@ Para garantizar una usabilidad adaptada al entorno logístico, se establecen tre
 * **Prototipado y Diseño:** Sistema de diseño unificado maquetado en Figma bajo el color primario `#1B4F72`.
 * **Rendimiento:** Tiempos de respuesta fluidos al escaneo síncrono/asíncrono de entradas.
 
+---
+
+## 3. Sprint Backlog (Issue #16)
+
+Selección de tareas priorizadas para la presente iteración:
+1. Documentación de arquitectura MVC e interfaz gráfica.
+2. Maquetación Swing en NetBeans (`MainFrame`, `JTable`, Renderers).
+3. Conexión de eventos e interacción de controladores.
+
+---
+
+## 4. Referencias (Formato IEEE)
+
+[1] ISO/IEC/IEEE, "Systems and software engineering — Software life cycle processes," ISO/IEC/IEEE 12207:2017, 2017.  
+[2] StockScan Team, "StockScan SGA Interface Design System," Figma, 2026. [Online]. Available: https://www.figma.com/make/fVgbUMpu9QaXt6AXwhjVY5/StockScan-SGA-Interface-Design. [Accessed: Sep. 29, 2026].
