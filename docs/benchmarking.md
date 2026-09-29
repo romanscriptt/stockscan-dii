@@ -1,6 +1,6 @@
 # 3. Análisis de Mercado y Benchmarking
 
-En esta sección se detalla el estudio comparativo realizado sobre las soluciones de software líderes en los sectores de gestión de inventario, comunicación empresarial y control de recursos humanos. El objetivo es recopilar las mejores prácticas funcionales y tecnológicas para consolidar la arquitectura de nuestra App de Almacén.
+En esta sección se detalla el estudio comparativo realizado sobre las soluciones de software líderes en los sectores de gestión de inventario, comunicación empresarial y control de recursos humanos. El objetivo es recopilar las mejores prácticas funcionales y tecnológicas para consolidar la arquitectura de la aplicación.
 
 ## 3.1. Matriz Comparativa de Competidores
 
@@ -22,9 +22,18 @@ A través de la investigación de mercado, se han detectado tres grandes problem
 
 ## 3.3. Conclusiones y Decisiones de Ingeniería para el Proyecto
 
-Las conclusiones extraídas del benchmarking justifican el diseño técnico y funcional adoptado para nuestra App de Almacén:
+Las conclusiones extraídas del benchmarking justifican el diseño técnico y funcional adoptado para la aplicación:
 
 * **Unificación de Ecosistemas (Ventaja Competitiva):** Nuestra aplicación resolverá la fragmentación centralizando los tres módulos bajo una única identidad de usuario. Al hacer check-in, la app sabe instantáneamente el rol del empleado (administrador, mozo, camarero), habilitando sus canales de chat correspondientes y su lista de inventario asignada.
 * **Implementación de Arquitectura Multiplataforma:** Para emular el rendimiento y la versatilidad de los líderes del sector, se opta por un stack móvil multiplataforma (**Flutter** o **React Native**) que minimiza costes de mantenimiento de código y permite desplegar el software tanto en entornos Android como iOS rápidamente.
 * **Estrategia Offline-First:** El módulo de escáner móvil funcionará de forma local mediante una base de datos embebida ligera (**SQLite / Realm**). Al realizar la lectura de stock, los datos se guardarán localmente en el dispositivo y se sincronizarán en segundo plano con el backend centralizado una vez detectada una conexión a internet estable.
 * **Conexiones Síncronas Eficientes:** Para evitar la saturación del servidor y ofrecer un módulo de mensajería instantánea ágil, se utilizarán protocolos basados en eventos en tiempo real (**WebSockets**), optimizando el flujo de datos entre la gerencia y los operarios en los momentos de mayor actividad laboral.
+
+### 3.4. Referencias (Formato IEEE)
+[1] Sortly Inc., "Sortly Inventory Management Support and Offline Capabilities," Sortly Help Center, 2026. [Online]. Available: https://sortly.com. [Accessed: Sep. 29, 2026].  
+[2] Sortly Inc., "Sortly: Inventory Simplified," Google Play Store, version 5.x, Sep. 2026. [Online]. Available: https://google.com. [Accessed: Sep. 29, 2026].  
+[3] Stockagile S.L., "Gestión de Inventario y Soluciones SGA Omnicanal," Stockagile Official Website, 2026. [Online]. Available: https://stockagile.com. [Accessed: Sep. 29, 2026].  
+[4] Slack Technologies, "Slack Core Features and Real-Time Communication Tools," Slack Official Documentation, 2026. [Online]. Available: https://slack.com. [Accessed: Sep. 29, 2026].  
+[5] Microsoft Corporation, "Microsoft Teams: Jerarquía de canales y roles organizacionales," Microsoft Tech Docs, 2026. [Online]. Available: https://microsoft.com. [Accessed: Sep. 29, 2026].  
+[6] Factorial HR S.L., "Software de Control Horario y Gestión de Turnos en Movilidad," Factorial España, 2026. [Online]. Available: https://factorialhr.es. [Accessed: Sep. 29, 2026].  
+[7] When I Work Inc., "Employee Scheduling and Workplace Communication Platform," When I Work Platforms, 2026. [Online]. Available: https://wheniwork.com. [Accessed: Sep. 29, 2026].  
