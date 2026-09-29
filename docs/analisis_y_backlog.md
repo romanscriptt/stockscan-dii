@@ -18,3 +18,10 @@ Para garantizar una usabilidad adaptada al entorno logístico, se establecen tre
 ### 1.3. Administrador del Sistema
 * **Requisitos:** Mantenimiento de catálogo y trazabilidad de operaciones.
 
+---
+
+## 2. Objetivos Principales de la Interfaz (Issue #10)
+
+* **Prototipado y Diseño:** Sistema de diseño unificado maquetado en Figma bajo el color primario `#1B4F72`.
+* **Rendimiento:** Tiempos de respuesta fluidos al escaneo síncrono/asíncrono de entradas.
+
