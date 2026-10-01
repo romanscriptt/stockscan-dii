@@ -58,3 +58,8 @@ El proyecto **SCAN ALMACÉN / StockScan** es una solución informática de gesti
 Esta memoria recoge el trabajo de análisis de mercado, diseño del público objetivo, definición de los criterios de usabilidad UX/UI, maquetación interactiva en Figma, especificación de tokens de diseño, selección técnica de librerías en Java Swing (`FlatLaf`, `ZXing`, `JFreeChart`, `MigLayout`)y el mapeo conceptual hacia la Programación Orientada a Objetos (POO).
 
 ---
+
+# 1. INTRODUCCIÓN
+
+### 1.1. Contexto del proyecto
+En el sector logístico actual y en los operadores e-commerce, la precisión del stock y la rapidez en la preparación de pedidos resultan fundamentales para mantener la competitividad operativa.
