@@ -69,3 +69,18 @@ Según estudios del sector logístico (CSCMP), más del 65% de los errores de in
 
 ### 1.3. Propuesta de solución
 Diseñar una interfaz gráfica intuitiva, limpia y de alto contraste para **StockScan SGA**, orientada a minimizar la carga cognitiva del operario y agilizar la toma de decisiones en tareas de picking, packing y control de inventario.
+
+### 1.4. Objetivos del proyecto
+* **Objetivo General:** Definir la experiencia de usuario (UX), el sistema de diseño visual (UI) y la arquitectura de componentes Java Swing para el sistema StockScan.
+* **Objetivos Específicos:**
+  * Caracterizar a los usuarios finales del sistema mediante *User Personas*.
+  * Maquetar el prototipo interactivo en Figma con flujos navegables y componentes estandarizados.
+  * Definir la paleta cromática y tokens de diseño para su fácil traslado a código `java.awt.Color`.
+  * Investigar la viabilidad de librerías para la futura interfaz gráfica en NetBeans/Java.
+  * Establecer la trazabilidad POO entre las vistas visuales de Figma y las clases Java.
+ 
+### 1.5. Alcance y limitaciones 
+El alcance redactado por Álvaro López comprende el análisis de requerimientos visuales, prototipado de alta fidelidad, documentación de librerías y estructuración POO. Las capas de persistencia y servicios backend corresponden a los siguientes hitos del equipo.
+
+---
+
