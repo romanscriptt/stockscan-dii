@@ -182,3 +182,15 @@ El seguimiento del proyecto se gestiona de forma ágil organizando el flujo de t
 | **Peligro / Destructivo** | Peligro | `#E74C3C` | `(231, 76, 60)`|
 
 ### 5.4. Diseño de la Base de Datos y Modelo E/R
+
+---
+
+# 6. DESARROLLO E IMPLEMENTACIÓN
+
+### 6.1. Evaluación técnica de librerías candidatas para Java Swing *(Redactado por Álvaro López - Issue #15)*
+Se investigaron las siguientes librerías para garantizar la calidad del software en Java Swing:
+
+1. **FlatLaf:** Aporta un Look and Feel moderno (Light/Dark) y soporte nativo HiDPI sin modificar la estructura interna de Swing
+2. **ZXing ("Zebra Crossing"):** Decodificación e integración del motor de lectura de códigos de barras y QR.
+3. **JFreeChart:** Integración de componentes visuales para estadísticas y gráficos de rotación de stock.
+4. **MigLayout:** Administrador de layouts basado en grids para resolver inconsistencias de renderizado en diferentes resoluciones.
