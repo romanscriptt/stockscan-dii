@@ -159,7 +159,7 @@ El seguimiento del proyecto se gestiona de forma ágil organizando el flujo de t
 
 ---
 
- 5. DISEÑO DE LA SOLUCIÓN
+# 5. DISEÑO DE LA SOLUCIÓN
 
 ### 5.1. Objetivos principales de la interfaz UX/UI
 * **Reducción de Carga Mental:** Priorización de datos críticos eliminando distracciones visuales.
