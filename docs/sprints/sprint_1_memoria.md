@@ -134,3 +134,15 @@ El seguimiento del proyecto se gestiona de forma ágil organizando el flujo de t
 * **RF-01:** Visualización limpia de stock, ubicación física y estado en menos de 2 segundos.
 * **RF-02:** Flujos de interacción directa (búsqueda, filtrado e inventario) en un máximo de 3 pasos.
 * **RF-03:** Notificación visual inmediata mediante códigos de color semánticos frente a acciones destructivas o errores.
+  
+### 4.2. Requisitos no funcionales y usabilidad 
+* **RNF-01 (Usabilidad):** Diseño de bajo esfuerzo cognitivo adaptado a la fatiga visual de entornos industriales.
+* **RNF-02 (Adaptabilidad):** Maquetación responsiva basada en Auto-Layout para resoluciones de monitores y tablets industriales.
+
+### 4.3. Matriz de trazabilidad por perfil de usuario 
+
+| Perfil de Usuario | Componentes Swing Clave | Requisito Principal UX | Impacto en el Negocio |
+| :--- | :--- | :--- | :--- |
+| **Operario** | `JButton` grandes, `JTextField` autofocus | Mínimos clics por acción | Reducción del 40% en tiempos de registro |
+| **Supervisor** | `JTable` personalizada, `JFreeChart` | Visualización consolidada de KPIs | Prevención de roturas de stock |
+| **Administrador** | `JTree` / `JTabbedPane` | Aislamiento y control de permisos | Cumplimiento de políticas de trazabilidad |
