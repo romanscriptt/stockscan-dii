@@ -200,3 +200,5 @@ Equivalencia técnica establecida para facilitar el desarrollo en código:
 * **Marcos / Vistas en Figma $\rightarrow$ Futuras Clases Java:** Vistas del prototipo (`DashboardScreen`, `StockScreen`, `ScannerScreen`) trasladadas a clases controladoras de pantalla.
 * **Propiedades de Componentes $\rightarrow$ Atributos de Clase:** `int cantidadStock`, `String codigoUbicacion`, `boolean estaActivo`.
 * **Eventos / Interacciones $\rightarrow$ Métodos Java:** `mostrarDetalle()`, `buscarProducto()`, `actualizarStock()`.
+  
+### 6.3. Implementación del Backend, Controladores y Persistencia
