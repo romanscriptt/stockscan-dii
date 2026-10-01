@@ -114,6 +114,8 @@ En base a ello se tomaron las siguientes decisiones de ingeniería:
 - **Offline-first:** almacenamiento local con SQLite o Realm y sincronización en segundo plano al recuperar la conexión.
 - **Tiempo real:** mensajería mediante WebSockets para evitar la saturación del servidor.
 
+### 2.3. Estudio de viabilidad técnica y normativa
+
 ### 2.4. Estudio de viabilidad económica y presupuesto inicial
 
 ---
