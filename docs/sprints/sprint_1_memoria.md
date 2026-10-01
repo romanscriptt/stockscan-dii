@@ -66,3 +66,6 @@ En el sector logístico actual y en los operadores e-commerce, la precisión del
 
 ### 1.2. Problema o necesidad detectada
 Según estudios del sector logístico (CSCMP), más del 65% de los errores de inventario en Startups e-commerce y almacenes de distribución se deben a interfaces de software complejas o mal adaptadas al entorno de trabajo diario.
+
+### 1.3. Propuesta de solución
+Diseñar una interfaz gráfica intuitiva, limpia y de alto contraste para **StockScan SGA**, orientada a minimizar la carga cognitiva del operario y agilizar la toma de decisiones en tareas de picking, packing y control de inventario.
