@@ -12,7 +12,7 @@
 * **Fecha:** Octubre 2026
 ## ÍNDICE GENERAL
 
-1. **INTRODUCCIÓN**[cite: 10]
+1. **INTRODUCCIÓN**
    - 1.1. Contexto del proyecto 
    - 1.2. Problema o necesidad detectada 
    - 1.3. Propuesta de solución 
@@ -31,7 +31,7 @@
    - 4.1. Requisitos funcionales de la interfaz 
    - 4.2. Requisitos no funcionales y usabilidad 
    - 4.3. Matriz de trazabilidad por perfil de usuario 
-5. **DISEÑO DE LA SOLUCIÓN**[cite: 10]
+5. **DISEÑO DE LA SOLUCIÓN**
    - 5.1. Objetivos principales de la interfaz UX/UI 
    - 5.2. Prototipado interactivo en Figma 
    - 5.3. Sistema de Tokens de Diseño y Paleta Cromática 
@@ -48,3 +48,13 @@
    - 9.1. Cumplimiento de objetivos del Sprint
    - 9.2. Trabajo pendiente para próximos Sprints 
 10. **REFERENCIAS BIBLIOGRÁFICAS**
+
+---
+
+## RESUMEN EJECUTIVO
+
+El proyecto **SCAN ALMACÉN / StockScan** es una solución informática de gestión de almacén (SGA) orientada a la optimización de procesos logísticos, reducción de errores operativos y aceleración del tiempo de aprendizaje del personal. 
+
+Esta memoria recoge el trabajo de análisis de mercado, diseño del público objetivo, definición de los criterios de usabilidad UX/UI, maquetación interactiva en Figma, especificación de tokens de diseño, selección técnica de librerías en Java Swing (`FlatLaf`, `ZXing`, `JFreeChart`, `MigLayout`)y el mapeo conceptual hacia la Programación Orientada a Objetos (POO).
+
+---
