@@ -10,3 +10,41 @@
 * **Tutor:** Willman Acosta Lugo 
 * **Ciclo Formativo:** Desarrollo de Aplicaciones Multiplataforma (DAM) 
 * **Fecha:** Octubre 2026
+## ÍNDICE GENERAL
+
+1. **INTRODUCCIÓN**[cite: 10]
+   - 1.1. Contexto del proyecto 
+   - 1.2. Problema o necesidad detectada 
+   - 1.3. Propuesta de solución 
+   - 1.4. Objetivos del proyecto 
+   - 1.5. Alcance y limitaciones 
+2. **ANÁLISIS DEL CONTEXTO Y VIABILIDAD**
+   - 2.1. Sector profesional y perfil de usuarios / User Personas 
+   - 2.2. Benchmarking y soluciones existentes 
+   - 2.3. Estudio de viabilidad técnica y normativa 
+   - 2.4. Estudio de viabilidad económica y presupuesto inicial 
+3. **PLANIFICACIÓN Y GESTIÓN DEL PROYECTO**
+   - 3.1. Metodología de desarrollo y GitHub Projects 
+   - 3.2. Reparto de roles y responsabilidades en el equipo 
+   - 3.3. Cronograma e hitos del proyecto 
+4. **ANÁLISIS DE REQUISITOS**
+   - 4.1. Requisitos funcionales de la interfaz 
+   - 4.2. Requisitos no funcionales y usabilidad 
+   - 4.3. Matriz de trazabilidad por perfil de usuario 
+5. **DISEÑO DE LA SOLUCIÓN**[cite: 10]
+   - 5.1. Objetivos principales de la interfaz UX/UI 
+   - 5.2. Prototipado interactivo en Figma 
+   - 5.3. Sistema de Tokens de Diseño y Paleta Cromática 
+   - 5.4. Diseño de la Base de Datos y Modelo E/R 
+6. **DESARROLLO E IMPLEMENTACIÓN**
+   - 6.1. Evaluación técnica de librerías candidatas para Java Swing 
+   - 6.2. Mapeo conceptual POO: Figma vs. Estructura Java 
+   - 6.3. Implementación del Backend, Controladores y Persistencia 
+7. **PRUEBAS Y ASEGURAMIENTO DE LA CALIDAD**
+   - 7.1. Criterios de Aceptación y Pruebas UX/UI 
+   - 7.2. Pruebas Unitarias, Integración y Sistema
+8. **DESPLIEGUE Y PUESTA EN PRODUCCIÓN** 
+9. **RESULTADOS Y EVALUACIÓN FINAL**
+   - 9.1. Cumplimiento de objetivos del Sprint
+   - 9.2. Trabajo pendiente para próximos Sprints 
+10. **REFERENCIAS BIBLIOGRÁFICAS**
