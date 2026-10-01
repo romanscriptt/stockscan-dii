@@ -103,3 +103,7 @@ Para adecuar la herramienta al entorno operativo real, se han definido tres perf
   
 ### 2.2. Benchmarking y soluciones existentes
 Se investigaron marcos de trabajo y librerías modernas de interfaz gráfica para justificar la elección de layouts flexibles y temas oscuros/claros sin reescribir la base del framework Swing.
+
+### 2.3. Estudio de viabilidad técnica y normativa
+
+### 2.4. Estudio de viabilidad económica y presupuesto inicial
