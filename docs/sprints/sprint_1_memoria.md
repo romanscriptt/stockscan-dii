@@ -187,7 +187,7 @@ El seguimiento del proyecto se gestiona de forma ágil organizando el flujo de t
 
 # 6. DESARROLLO E IMPLEMENTACIÓN
 
-### 6.1. Evaluación técnica de librerías candidatas para Java Swing *(Redactado por Álvaro López - Issue #15)*
+### 6.1. Evaluación técnica de librerías candidatas para Java Swing
 Se investigaron las siguientes librerías para garantizar la calidad del software en Java Swing:
 
 1. **FlatLaf:** Aporta un Look and Feel moderno (Light/Dark) y soporte nativo HiDPI sin modificar la estructura interna de Swing
