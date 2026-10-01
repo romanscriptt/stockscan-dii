@@ -7,6 +7,6 @@
 * **Elena Sáez**
 * **Ángel Luis**
 
-**Tutor:** Willman Acosta Lugo 
-**Ciclo Formativo:** Desarrollo de Aplicaciones Multiplataforma (DAM) 
-**Fecha:** Octubre 2026
+* **Tutor:** Willman Acosta Lugo 
+* **Ciclo Formativo:** Desarrollo de Aplicaciones Multiplataforma (DAM) 
+* **Fecha:** Octubre 2026
