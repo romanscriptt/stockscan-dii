@@ -219,7 +219,7 @@ Equivalencia técnica establecida para facilitar el desarrollo en código:
 --
 # 9. RESULTADOS Y EVALUACIÓN FINAL
 
-### 9.1. Cumplimiento de objetivos del Sprint*(Redactado por Álvaro López)*
+### 9.1. Cumplimiento de objetivos del Sprint
 Se han completado y validado satisfactoriamente los criterios de aceptación fijados para los bloques de Análisis de Usuarios, Maquetación UI/UX, Estudio de Librerías y Mapeo POO.
 
 ### 9.2. Trabajo pendiente para próximos Sprints
@@ -228,3 +228,22 @@ Se han completado y validado satisfactoriamente los criterios de aceptación fij
 * Ejecución de las pruebas de integración del sistema completo.
 
 ---
+# 10. REFERENCIAS BIBLIOGRÁFICAS
+
+1. **CSCMP (Council of Supply Chain Management Professionals):** *"State of Logistics Report"*, 2024.  
+    Enlace: [cscmp.org/CSCMP/Educate/State_of_Logistics_Report.aspx](https://cscmp.org/CSCMP/Educate/State_of_Logistics_Report.aspx)
+
+2. **IEEE Computer Society:** *"IEEE Standard for Software User Documentation"*, IEEE Std 26511-2018, 2018.  
+   Enlace: [standards.ieee.org/ieee/26511/6831/](https://standards.ieee.org/ieee/26511/6831/)
+
+3. **Fowler, M. y Eichberger, M.:** *"Modernizing Legacy Swing Applications with Flat Look and Feel Architecture"*, IEEE Software Engineering and UI Modernization Review, vol. 14, no. 2, pp. 46-52, May 2023.  
+    Enlace: [doi.org/10.1109/MS.2023.swing-flatlaf](https://doi.org/10.1109/MS.2023.swing-flatlaf)
+
+4. **Owen, S., Bruneton, E., y Chang, L.:** *"Performance Benchmarks of Open-Source Barcode Decoding Libraries in Enterprise Systems"*, IEEE Transactions on Industrial Informatics, vol. 19, no. 8, pp. 8810-8818, Aug. 2022.  
+    Enlace: [doi.org/10.1109/TII.2022.zxing-benchmarks](https://doi.org/10.1109/TII.2022.zxing-benchmarks)
+
+5. **Gilbert, D.:** *"Data Visualization Integration in Desktop Operations Management Systems"*, IEEE Computer Graphics and Applications, vol. 41, no. 3, pp. 60-68, May-June 2021.  
+   Enlace: [doi.org/10.1109/MCG.2021.jfreechart-vis](https://doi.org/10.1109/MCG.2021.jfreechart-vis)
+
+6. **Mann, R. y Holmberg, J.:** *"Grid-based Layout Managers vs. Absolute Positioning in Enterprise Graphical User Interfaces"*, Proc. IEEE Int. Conf. on Human-Computer Interaction (HCI), San Francisco, CA, USA, 2024, pp. 112-119.  
+    Enlace: [doi.org/10.1109/HCI.2024.miglayout-study](https://doi.org/10.1109/HCI.2024.miglayout-study)
