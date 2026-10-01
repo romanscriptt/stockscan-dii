@@ -102,9 +102,17 @@ Para adecuar la herramienta al entorno operativo real, se han definido tres perf
    * **Necesidades UX:** Vistas desacopladas mediante patrón MVC, asignación de permisos y control de acceso por roles.
   
 ### 2.2. Benchmarking y soluciones existentes
-Se investigaron marcos de trabajo y librerías modernas de interfaz gráfica para justificar la elección de layouts flexibles y temas oscuros/claros sin reescribir la base del framework Swing.
 
-### 2.3. Estudio de viabilidad técnica y normativa
+Se realizó un estudio comparativo de las soluciones líderes en los tres módulos que integrará el proyecto: inventario (Sortly, Stockagile), comunicación interna (Slack, Microsoft Teams) y control horario (Factorial, When I Work). Se analizaron su flujo de usuario, sus tecnologías estimadas y sus puntos de dolor, como la pérdida de datos sin conexión, el exceso de ruido visual y la lentitud en accesos concurrentes.
+
+Del análisis se detectaron tres problemas del mercado: la fragmentación del software (varias herramientas y suscripciones), la falta de conectividad en almacenes y cámaras frigoríficas, y la saturación de servidores en los relevos de turno.
+
+En base a ello se tomaron las siguientes decisiones de ingeniería:
+
+- **Unificación de módulos:** una única identidad de usuario que habilita los canales de chat y el inventario según el rol.
+- **Multiplataforma:** desarrollo móvil con Flutter o React Native para Android e iOS.
+- **Offline-first:** almacenamiento local con SQLite o Realm y sincronización en segundo plano al recuperar la conexión.
+- **Tiempo real:** mensajería mediante WebSockets para evitar la saturación del servidor.
 
 ### 2.4. Estudio de viabilidad económica y presupuesto inicial
 
@@ -121,7 +129,7 @@ El seguimiento del proyecto se gestiona de forma ágil organizando el flujo de t
 | :--- | :--- |
 | **Álvaro López** | Análisis de perfiles, Objetivos UI/UX , Sprint Backlog , Tokens de diseño , Librerías  y Mapeo POO. |
 | **Carmen Monge** | |
-| **Elena Sáez** |  |
+| **Elena Sáez** | Arquitectura MVC, Análisis de interfaces, Modelo de entidades, Estructura de paquetes y Documentación técnica. |
 | **Ángel** | |
 
 ### 3.3. Cronograma e hitos del proyecto
