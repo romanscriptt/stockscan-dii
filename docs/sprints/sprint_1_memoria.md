@@ -132,7 +132,7 @@ El seguimiento del proyecto se gestiona de forma ágil organizando el flujo de t
 | **Álvaro López** | Análisis de perfiles, Objetivos UI/UX , Sprint Backlog , Tokens de diseño , Librerías  y Mapeo POO. |
 | **Carmen Monge** | |
 | **Elena Sáez** | Arquitectura MVC, Análisis de interfaces, Modelo de entidades, Estructura de paquetes y Documentación técnica. |
-| **Ángel** | Product Backlog, Definición de requisitos funcionales, Flujos de pantalla, Especificación de casos de uso y Comportamiento de la aplicación|
+| **Ángel** | Product Backlog, Definición de requisitos funcionales, Flujos de pantalla, Especificación de casos de uso y Comportamiento de la aplicación. |
 
 ### 3.3. Cronograma e hitos del proyecto
 
