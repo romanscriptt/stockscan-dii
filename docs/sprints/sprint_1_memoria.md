@@ -215,3 +215,16 @@ Equivalencia técnica establecida para facilitar el desarrollo en código:
 ---
 
 # 8. DESPLIEGUE Y PUESTA EN PRODUCCIÓN
+
+--
+# 9. RESULTADOS Y EVALUACIÓN FINAL
+
+### 9.1. Cumplimiento de objetivos del Sprint*(Redactado por Álvaro López)*
+Se han completado y validado satisfactoriamente los criterios de aceptación fijados para los bloques de Análisis de Usuarios, Maquetación UI/UX, Estudio de Librerías y Mapeo POO.
+
+### 9.2. Trabajo pendiente para próximos Sprints
+* Desarrollo de la persistencia relacional en Base de Datos.
+* Programación de los controladores y conexión con la interfaz gráfica Java Swing.
+* Ejecución de las pruebas de integración del sistema completo.
+
+---
