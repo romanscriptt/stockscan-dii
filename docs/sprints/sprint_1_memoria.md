@@ -127,3 +127,10 @@ El seguimiento del proyecto se gestiona de forma ágil organizando el flujo de t
 ### 3.3. Cronograma e hitos del proyecto
 
 ---
+
+# 4. ANÁLISIS DE REQUISITOS
+
+### 4.1. Requisitos funcionales de la interfaz 
+* **RF-01:** Visualización limpia de stock, ubicación física y estado en menos de 2 segundos.
+* **RF-02:** Flujos de interacción directa (búsqueda, filtrado e inventario) en un máximo de 3 pasos.
+* **RF-03:** Notificación visual inmediata mediante códigos de color semánticos frente a acciones destructivas o errores.
