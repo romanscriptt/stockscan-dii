@@ -146,3 +146,11 @@ El seguimiento del proyecto se gestiona de forma ágil organizando el flujo de t
 | **Operario** | `JButton` grandes, `JTextField` autofocus | Mínimos clics por acción | Reducción del 40% en tiempos de registro |
 | **Supervisor** | `JTable` personalizada, `JFreeChart` | Visualización consolidada de KPIs | Prevención de roturas de stock |
 | **Administrador** | `JTree` / `JTabbedPane` | Aislamiento y control de permisos | Cumplimiento de políticas de trazabilidad |
+
+---
+
+ 5. DISEÑO DE LA SOLUCIÓN
+
+### 5.1. Objetivos principales de la interfaz UX/UI
+* **Reducción de Carga Mental:** Priorización de datos críticos eliminando distracciones visuales.
+* **Prevención de Errores:** Confirmaciones claras en cuadros modales y banners de notificación cromática.
