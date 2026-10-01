@@ -154,3 +154,30 @@ El seguimiento del proyecto se gestiona de forma ágil organizando el flujo de t
 ### 5.1. Objetivos principales de la interfaz UX/UI
 * **Reducción de Carga Mental:** Priorización de datos críticos eliminando distracciones visuales.
 * **Prevención de Errores:** Confirmaciones claras en cuadros modales y banners de notificación cromática.
+
+### 5.2. Prototipado interactivo en Figma 
+* **Prototipo Navegable:** *StockScan SGA Interface Design*.
+* **Vistas Maquetadas:** Navegación general, vista resumida de stock, escaneo de mercancía e historial de movimientos.
+
+### 5.3. Sistema de Tokens de Diseño y Paleta Cromática *(Redactado por Álvaro López - Issue #17)*
+
+**Paleta Cromática Principal**
+
+| Rol de Color | Nombre en Figma | Código Hexadecimal | Valores RGB (`java.awt.Color`) |
+| :--- | :--- | :--- | :--- |
+| **Primario** | Primario | `#1B4F72` | `(27, 79, 114)` |
+| **Primario Oscuro** | Primario oscuro | `#123A57` | `(18, 58, 87)`|
+| **Primario Claro** | Primario claro | `#06EAF8` | `(214, 234, 248)` |
+| **Fondo App** | Fondo app | `#F5F7FA` | `(245, 247, 250)` |
+| **Superficie** | Superficie | `#FFFFFF` | `(255, 255, 255)`|
+| **Borde** | Borde | `#E0E6ED` | `(232, 236, 248)`|
+
+**Colores Semánticos y Estados de Inventario**
+
+| Estado / Rol | Nombre en Figma | HEX | Valores RGB (`java.awt.Color`) |
+| :--- | :--- | :--- | :--- |
+| **Éxito (Texto/Icono)** | Éxito | `#27AE60` | `(39, 174, 96)`|
+| **Éxito (Fondo Badge)** | Éxito claro | `#E5F9E3` | `(213, 245, 227)`|
+| **Advertencia / Ámbar** | Acento / Ámbar | `#F39C12` | `(243, 156, 18)`|
+| **Peligro / Destructivo** | Peligro | `#E74C3C` | `(231, 76, 60)`|
+
