@@ -107,3 +107,23 @@ Se investigaron marcos de trabajo y librerías modernas de interfaz gráfica par
 ### 2.3. Estudio de viabilidad técnica y normativa
 
 ### 2.4. Estudio de viabilidad económica y presupuesto inicial
+
+---
+
+# 3. PLANIFICACIÓN Y GESTIÓN DEL PROYECTO
+
+### 3.1. Metodología de desarrollo y GitHub Projects 
+El seguimiento del proyecto se gestiona de forma ágil organizando el flujo de trabajo en **GitHub Projects** a través del **Sprint Backlog #16**. Las tareas se han clasificado y documentado mediante etiquetas especializadas (`design`, `documentation`, `enhancement`).
+
+### 3.2. Reparto de roles y responsabilidades en el equipo
+
+| Componente | Responsabilidades Principales |
+| :--- | :--- |
+| **Álvaro López** | Análisis de perfiles, Objetivos UI/UX , Sprint Backlog , Tokens de diseño , Librerías  y Mapeo POO. |
+| **Carmen Monge** | |
+| **Elena Sáez** |  |
+| **Ángel** | |
+
+### 3.3. Cronograma e hitos del proyecto
+
+---
