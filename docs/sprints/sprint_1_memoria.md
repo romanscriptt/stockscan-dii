@@ -63,3 +63,6 @@ Esta memoria recoge el trabajo de análisis de mercado, diseño del público obj
 
 ### 1.1. Contexto del proyecto
 En el sector logístico actual y en los operadores e-commerce, la precisión del stock y la rapidez en la preparación de pedidos resultan fundamentales para mantener la competitividad operativa.
+
+### 1.2. Problema o necesidad detectada
+Según estudios del sector logístico (CSCMP), más del 65% de los errores de inventario en Startups e-commerce y almacenes de distribución se deben a interfaces de software complejas o mal adaptadas al entorno de trabajo diario.
