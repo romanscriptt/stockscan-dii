@@ -202,3 +202,12 @@ Equivalencia técnica establecida para facilitar el desarrollo en código:
 * **Eventos / Interacciones $\rightarrow$ Métodos Java:** `mostrarDetalle()`, `buscarProducto()`, `actualizarStock()`.
   
 ### 6.3. Implementación del Backend, Controladores y Persistencia
+
+# 7. PRUEBAS Y ASEGURAMIENTO DE LA CALIDAD
+
+### 7.1. Criterios de Aceptación y Pruebas UX/UI *(Redactado por Álvaro López - Issues #10 y #16)*
+* [x] **Prototipado en Figma:** Prototipos de alta fidelidad aprobados y enlazados en el sistema de diseño.
+* [x] **Sistema de Diseño y Tokens:** Definición completa de colores, tipografía monoespaciada para códigos (`PRD-XXXX`) y badges de estado.
+* [x] **Flujos de Navegación:** Verificación de navegación fluida en la simulación interactiva de Figma.
+
+### 7.2. Pruebas Unitarias, Integración y Sistema
