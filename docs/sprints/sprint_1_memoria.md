@@ -92,9 +92,14 @@ Para adecuar la herramienta al entorno operativo real, se han definido tres perf
 1. **Operario de Almacén (Perfil Operativo):**
    * **Entorno:** Terminales táctiles.
    * **Necesidades UX:** Botones de gran tamaño, lecturas rápidas mediante códigos de barras, contraste elevado y flujos simples en pocos clics.
+     
 2. **Supervisor / Manager de Logística (Perfil de Gestión):**
    * **Entorno:** Puesto de escritorio / PC.
    * **Necesidades UX:** Dashboard central con KPIs en tiempo real, gestión de alertas de stock mínimo y reportes tabulares.
+     
 3. **Administrador del Sistema (Perfil Técnico):**
    * **Entorno:** Gestión de infraestructura y usuarios.
    * **Necesidades UX:** Vistas desacopladas mediante patrón MVC, asignación de permisos y control de acceso por roles.
+  
+### 2.2. Benchmarking y soluciones existentes
+Se investigaron marcos de trabajo y librerías modernas de interfaz gráfica para justificar la elección de layouts flexibles y temas oscuros/claros sin reescribir la base del framework Swing.
