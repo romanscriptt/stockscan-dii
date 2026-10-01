@@ -181,3 +181,4 @@ El seguimiento del proyecto se gestiona de forma ágil organizando el flujo de t
 | **Advertencia / Ámbar** | Acento / Ámbar | `#F39C12` | `(243, 156, 18)`|
 | **Peligro / Destructivo** | Peligro | `#E74C3C` | `(231, 76, 60)`|
 
+### 5.4. Diseño de la Base de Datos y Modelo E/R
