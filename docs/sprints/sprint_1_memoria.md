@@ -194,3 +194,9 @@ Se investigaron las siguientes librerías para garantizar la calidad del softwar
 2. **ZXing ("Zebra Crossing"):** Decodificación e integración del motor de lectura de códigos de barras y QR.
 3. **JFreeChart:** Integración de componentes visuales para estadísticas y gráficos de rotación de stock.
 4. **MigLayout:** Administrador de layouts basado en grids para resolver inconsistencias de renderizado en diferentes resoluciones.
+   
+### 6.2. Mapeo conceptual POO: Figma vs. Estructura Java
+Equivalencia técnica establecida para facilitar el desarrollo en código:
+* **Marcos / Vistas en Figma $\rightarrow$ Futuras Clases Java:** Vistas del prototipo (`DashboardScreen`, `StockScreen`, `ScannerScreen`) trasladadas a clases controladoras de pantalla.
+* **Propiedades de Componentes $\rightarrow$ Atributos de Clase:** `int cantidadStock`, `String codigoUbicacion`, `boolean estaActivo`.
+* **Eventos / Interacciones $\rightarrow$ Métodos Java:** `mostrarDetalle()`, `buscarProducto()`, `actualizarStock()`.
