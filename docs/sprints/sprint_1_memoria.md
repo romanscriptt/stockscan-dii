@@ -4,7 +4,7 @@
 **Componentes del Grupo y coevaluación:**
 * **Álvaro López** 90%
 * **Carmen Monge** 80%
-* **Elena Sáez** 95%
+* **Elena Sáez** 85%
 * **Ángel Luis** 80%
 
 * **Tutor:** Willman Acosta Lugo 
