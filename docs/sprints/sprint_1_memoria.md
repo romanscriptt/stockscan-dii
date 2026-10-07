@@ -1,11 +1,11 @@
 # MEMORIA DE PROYECTO INTERMODULAR (MÓDULO 0492)
 ## Proyecto: SCAN ALMACÉN / StockScan SGA
 
-**Componentes del Grupo:**
-* **Álvaro López** 
-* **Carmen Monge**
-* **Elena Sáez**
-* **Ángel Luis**
+**Componentes del Grupo y coevaluación:**
+* **Álvaro López** 90%
+* **Carmen Monge** 80%
+* **Elena Sáez** 95%
+* **Ángel Luis** 80%
 
 * **Tutor:** Willman Acosta Lugo 
 * **Ciclo Formativo:** Desarrollo de Aplicaciones Multiplataforma (DAM) 
