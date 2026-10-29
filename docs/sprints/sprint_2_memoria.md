@@ -239,20 +239,41 @@ El desarrollo se ha estructurado en torno a una ventana contenedora principal (`
 
 Para garantizar la homogeneidad de la interfaz y acelerar el desarrollo con el editor visual NetBeans Matisse, se han categorizado y parametrizado los componentes gráficos clave de la aplicación:
 
-#### Botones (`JButton`)
-Se han configurado tres variantes estilísticas adaptadas a la paleta corporativa:
-* **Botón primario:** Fondo azul (`#1B4F72`) con texto blanco para acciones destacadas (ej. `+ Añadir producto` o `Confirmar`).
-* **Botones del menú lateral (`panelSidebar`):** Fondo azul oscuro (`#121E2B`), sin pintado de foco (`focusPainted = false`) y alineación a la izquierda para garantizar una lectura limpia del menú de navegación.
-* **Botones de acción contextual:** Fondos suaves o neutros para tareas secundarias como exportar o aplicar filtros.
+#### Vista de Autenticación (`LoginFrame`)
 
-#### Tablas de datos (`JTable`)
-Las tablas principales (`tblProductosStock`, `tblTrazabilidad`, etc.) se han implementado sobre un modelo `DefaultTableModel` con la edición de celdas deshabilitada (`isCellEditable = false`) para evitar modificaciones accidentales. Cuentan con selección por fila única (`SINGLE_SELECTION`), cabeceras con estilo personalizado y renderizadores de celda específicos para los indicadores de estado (`[OK]`, `[BAJO]`, `[SIN STOCK]`).
+> ![LoginFrame](https://github.com/user-attachments/assets/479aa5c7-2b1e-40e0-8c79-8c4872c28cef)
 
-#### Campos de entrada y desplegables (`JTextField` y `JComboBox`)
-Se han homogeneizado las cajas de texto con la tipografía del sistema (`SansSerif` de 12 px) y bordes neutros. En los desplegables de filtrado por categoría o ubicación se han utilizado modelos genéricos (`DefaultComboBoxModel`), facilitando la carga dinámica de datos desde la base de datos.
+* **Estructura visual:** Formulario en *split layout* de $1000 \times 600\text{ px}$ dividido en un banner corporativo lateral (`panelBannerLogin`, $450\text{ px}$) y un área central de credenciales (`panelFormLogin`, $550\text{ px}$).
+* **Componentes integrados:** Campos de entrada alineados para correo (`txtEmail`) y clave (`txtPassword`), junto a un botón principal estilizado (`btnIniciarSesion`).
 
-#### Menú lateral fijo (`panelSidebar`)
-Diseñado con unas dimensiones fijas de $220 \times 600\text{ px}$, el panel lateral integra los accesos directos a las 9 secciones, la tarjeta de perfil del usuario conectado y etiquetas dinámicas (`lblBadgeAlertas`, `lblBadgeChat`) que actúan como contadores de avisos pendientes.
+---
+
+#### Cuadro de Mando (`DashboardPanel`)
+
+> ![Dashboard](https://github.com/user-attachments/assets/df6982c4-c4b8-4935-a8ed-6036b1447896)
+
+* **Menu Lateral Fijo (`panelSidebar`):** Contenedor lateral de $220 \times 600\text{ px}$ en azul oscuro (`#121E2B`), con botones de acceso directo a los 9 paneles, tarjetas de usuario y etiquetas de aviso pendientes (`lblBadgeAlertas` y `lblBadgeChat`).
+* **Tarjetas KPI y Gráficos:** Módulos visuales superiores para métricas en tiempo real e integración de gráficos de actividad y tablas de registro reciente.
+
+---
+
+#### Control de Inventario (`StockPanel`)
+
+> ![StockPanel](https://github.com/user-attachments/assets/b313edcc-5205-47da-9a16-f0465524a41c)
+
+* **Tabla Principal de Datos (`tblProductosStock`):** Implementada con `DefaultTableModel` no editable, renderizado de celdas personalizado para badges de estado (`[OK]`, `[BAJO]`, `[SIN STOCK]`) y barra visual de nivel.
+* **Filtros e Inputs:** Buscador reactivo (`txtBuscarStock`), selector por categoría y botonera de acciones contextuales.
+
+---
+
+#### Impresión de Etiquetas y Trazabilidad (`EtiquetasPanel` y `TrazabilidadPanel`)
+
+| Vista Previa de Etiquetas | Histórico de Trazabilidad |
+| :---: | :---: |
+| ![EtiquetasPanel](https://github.com/user-attachments/assets/e652abe3-ddf8-4728-bdb3-ca214639436b) | ![TrazabilidadPanel](https://github.com/user-attachments/assets/225f3d08-6733-4b70-80bc-b49da7e616f0) |
+
+* **Generación de Etiquetas:** Visor de previsualización a escala $1:1$ (`panelPreviewEtiqueta`) que dibuja en tiempo real el código Barcode/QR parametrizado antes de enviar a imprenta.
+* **Auditoría e Historial:** Tabla inmutable de registro de movimientos (`tblTrazabilidad`) con filtros combinados por rango de fecha, tipo de operación y operario.
 
 ---
 
