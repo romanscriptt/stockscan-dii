@@ -522,7 +522,12 @@ La revisión estática identifica ajustes de coherencia textual y presentación 
 
 ## 5. Validación y ajustes
 
-> Introducir aquí la parte de Validación y ajustes (introducción general, si procede).
+Fase de contraste con los usuarios. Se enseña la aplicación a personas del público objetivo para comprobar que resuelve el problema inicial y que resulta fácil y rápida de usar. Con sus opiniones se hacen los ajustes finales.
+
+- Revisar los resultados de las pruebas de usabilidad y de la auditoría (herramientas automáticas y pruebas manuales).
+- Corregir en Wireframes, Mockups y prototipo Swing los problemas detectados, priorizando los de accesibilidad (contraste, teclado, tamaño de los elementos).
+- Volver a comprobar los puntos corregidos y registrar el resultado antes y después.
+- Documentar los resultados y los cambios realizados en el repositorio.
 
 ### 5.1. Corregir problemas detectados y validar los cambios
 
@@ -530,4 +535,60 @@ La revisión estática identifica ajustes de coherencia textual y presentación 
 
 ### 5.2. Documentar los resultados y cerrar el sprint
 
-> Introducir aquí la parte de documentación de resultados y cierre del sprint.
+**Qué se ha revisado**
+- Auditoría visual estática de las 10 vistas (sobre el código Java).
+- Revisión cruzada de la documentación del sprint (diseño, implementación, accesibilidad y métricas).
+- Usabilidad, accesibilidad y rendimiento: están definidos los requisitos, las métricas y las herramientas. 
+
+---
+
+### Problemas encontrados
+
+**Auditoría visual: 20 hallazgos** (0 altos, 16 medios, 4 bajos)
+
+| Grupo | Nº | Ejemplos |
+|---|---|---|
+| Detectados en código | 9 | Contador de Equipo sin 8 registros (VIS-01), «Fichado (07:10» sin cerrar (VIS-02), «2 productos seleccionados» fijo (VIS-03), códigos de barras hechos con texto (VIS-04), «Almacen» sin tilde (VIS-07/08), «Ana Rodriguez» (VIS-09) |
+| Pendientes de decisión | 2 | Gráfico del Dashboard y calendario de la Agenda vacíos (VIS-10/11) |
+| Pendientes de comprobación visual | 9 | Recortes y legibilidad al tamaño mínimo (VIS-12 a VIS-20) |
+
+**Incoherencias entre documentos**
+
+| Problema | Dónde |
+|---|---|
+| Ventana mínima: 1280×720 (pautas) frente a 1000×600 (implementación) y 900×600 (Equipo). Barra lateral ≈210 px frente a 220 px | Pautas, implementación y auditoría |
+| Color de la barra lateral #121E2B fuera de la paleta | Implementación y pautas |
+| Estados `[OK]/[BAJO]/[SIN STOCK]` frente a «En stock / Stock bajo / Sin stock» | Implementación y diseño |
+| Gráficos y códigos de barras «en tiempo real» frente a la auditoría (panel sin datos, barras con texto) | Implementación y auditoría |
+| Tamaño táctil 48×48 dp (unidad de Android) frente a 24×24 px de WCAG 2.2 | Pautas y estándares |
+| Estándares de accesibilidad y métricas pensados para web o servidor (Lighthouse, axe, HTML, solicitudes, usuarios concurrentes) en una app Swing local con SQLite | Estándares y métricas |
+| Errores en métricas: densidad de defectos con la fórmula de la tasa de errores, definición de «tolerantes» en Apdex y referencias que no coinciden | Métricas |
+
+---
+
+### Correcciones
+
+| Corrección | Hallazgos |
+|---|---|
+| Cerrar el paréntesis de «Fichado (07:10)» | VIS-02 | 
+| Unificar «Almacén Central» y «Ana Rodríguez» en una clase de constantes | VIS-07/08/09 | 
+| Ajustar el contador de Equipo a los registros mostrados y quitar filas vacías | VIS-01 | 
+| Generar el subtítulo de Etiquetas desde la selección | VIS-03 | 
+| Usar placeholder en los buscadores (Etiquetas y Chat) | VIS-05/06 | 
+| Decidir cómo mostrar los códigos de barras, el gráfico del Dashboard y la Agenda (propuesta: datos de ejemplo) | VIS-04/10/11 | 
+| Unificar tamaño de ventana, ancho de la barra lateral, colores y textos de estado entre documentos | Incoherencias | 
+| Reorientar estándares y métricas a escritorio (WCAG2ICT, API de accesibilidad de Java, NVDA) y corregir fórmulas, glosario y referencias | Incoherencias |
+
+---
+
+### Comparación antes y después
+
+| Indicador | Antes | Después |
+|---|---|---|
+| Hallazgos de la auditoría | 20 | [completar] |
+| Hallazgos de prioridad media / baja | 16 / 4 | [completar] |
+| Incoherencias entre documentos | 7 grupos | [completar] |
+| Vistas con textos incoherentes | 4 | [completar] |
+| Vistas comprobadas con la aplicación en ejecución | 0 de 10 | [completar] |
+
+**Estado:** auditoría estática y revisión cruzada hechas. Pasan al sprint 3: la validación visual con la aplicación en ejecución y las pruebas de usabilidad, accesibilidad y rendimiento.
