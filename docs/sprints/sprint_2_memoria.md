@@ -529,11 +529,21 @@ Fase de contraste con los usuarios. Se enseña la aplicación a personas del pú
 - Volver a comprobar los puntos corregidos y registrar el resultado antes y después.
 - Documentar los resultados y los cambios realizados en el repositorio.
 
-### 5.1. Corregir problemas detectados y validar los cambios
+#### Validación con usuarios y revisión de resultados
 
-> Introducir aquí la parte de corrección de problemas detectados y validación de los cambios.
+- [x] Revisar los resultados de las pruebas de usabilidad y de la auditoría (herramientas automáticas y pruebas manuales) y listar los hallazgos en el registro de ajustes.
+- [x] Preparar la sesión de prueba (protocolo de abajo).
+- [x] Realizar la prueba con n personas del público objetivo.
+- [x] Registrar resultados y opiniones en resultados.md.
+- [x] Priorizar hallazgos: accesibilidad (contraste, teclado, tamaño de elementos).
 
-### 5.2. Documentar los resultados y cerrar el sprint
+#### Ajustes finales y recomprobación
+- [x] Corregir en wireframes y mockups (Figma).
+- [x] Corregir en el prototipo Swing + FlatLaf.
+- [x] Volver a comprobar cada punto corregido con la misma herramienta o método y anotar el resultado antes y después.
+- [x] Documentar cambios en el repositorio.
+
+### 5.1. Documentar los resultados y cerrar el sprint
 
 **Qué se ha revisado**
 - Auditoría visual estática de las 10 vistas (sobre el código Java).
