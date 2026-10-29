@@ -325,17 +325,200 @@ Los datos de los operarios almacenados en la base de datos (nombre, correo corpo
 
 ## 4. Pruebas y auditoría
 
-> Introducir aquí la parte de Pruebas y auditoría (introducción general, si procede).
+# Auditoría visual de StockScan
 
-### 4.1. Realizar pruebas de usabilidad y accesibilidad
+## 4.1. Objetivo y alcance
 
-> Introducir aquí la parte de pruebas de usabilidad y accesibilidad.
+El objetivo de esta auditoría es revisar las vistas de la aplicación StockScan, desarrollada en Java Swing, antes de su validación.
 
-### 4.2. Auditar la interfaz con herramientas automáticas y pruebas manuales
+En esta fase se evalúan únicamente los aspectos visuales del prototipo:
 
-> Introducir aquí la parte de auditoría de la interfaz con herramientas automáticas y pruebas manuales.
+- Coherencia de textos y datos mostrados.
+- Legibilidad y presentación de los componentes.
+- Distribución de tablas, tarjetas, formularios y paneles.
+- Consistencia visual entre las distintas pantallas.
+- Posibles problemas de recorte, solapamiento o adaptación al tamaño de la ventana.
 
----
+**Fuera de alcance:** el funcionamiento de botones, filtros, acciones y navegación. Estos elementos no necesitan funcionar en esta fase del prototipo.
+
+Los hallazgos se clasifican en dos grupos:
+- **Detectado en código:** se identifica directamente al revisar los archivos Java.
+- **Pendiente de comprobación visual:** requiere ejecutar la aplicación y observar la interfaz.
+
+## 4.2. Lista unificada de hallazgos
+
+### Prioridades
+
+- **Alta:** afecta significativamente a la claridad o coherencia de la interfaz.
+- **Media:** conviene revisarlo antes de validar el diseño.
+- **Baja:** mejora de acabado y consistencia.
+
+| ID | Vista | Hallazgo | Prioridad | Estado |
+|---|---|---|---|---|
+| VIS-01 | Equipo | El encabezado indica 8 miembros, pero los datos visibles no parecen representar 8 registros completos y la tabla contiene filas vacías. Revisar la coherencia entre el contador y el contenido. | Media | Detectado en código |
+| VIS-02 | Equipo | El registro de Miguel Ramírez muestra `Fichado (07:10` sin cerrar el paréntesis. | Baja | Detectado en código |
+| VIS-03 | Etiquetas | El subtítulo indica «2 productos seleccionados» de forma fija. Revisar que el texto sea coherente con la selección que se desea representar en el prototipo. | Media | Detectado en código |
+| VIS-04 | Etiquetas | Los códigos de barras de la vista previa parecen representados mediante caracteres de texto. Si se pretende simular una etiqueta lista para imprimir, valorar una representación gráfica. | Media | Detectado en código |
+| VIS-05 | Etiquetas | El campo de búsqueda parece inicializarse con el texto «🔍 Buscar...». Comprobar si se muestra como contenido normal en lugar de como texto orientativo. | Media | Detectado en código |
+| VIS-06 | Chat | Los campos de búsqueda y mensaje empiezan con textos orientativos. Comprobar que se distingan visualmente de los datos introducidos por el usuario. | Media | Detectado en código |
+| VIS-07 | Stock | Aparece «Almacen Central» sin tilde. Unificar con «Almacén Central». | Baja | Detectado en código |
+| VIS-08 | Trazabilidad | Aparece «Almacen Central» sin tilde. Unificar con el nombre utilizado en el resto de las vistas. | Baja | Detectado en código |
+| VIS-09 | Varias vistas | El nombre «Ana Rodríguez» aparece también como «Ana Rodriguez». Unificar la escritura en todas las pantallas. | Baja | Detectado en código |
+| VIS-10 | Dashboard | El panel destinado al gráfico parece no dibujar datos en el código revisado. Confirmar si se desea dejar como espacio reservado o incluir un gráfico de ejemplo. | Media | Pendiente de decisión |
+| VIS-11 | Agenda | No se aprecian eventos en la cuadrícula semanal a partir del código revisado. Confirmar si el calendario vacío es intencional en esta fase. | Media | Pendiente de decisión |
+| VIS-12 | Dashboard | La ventana tiene un tamaño mínimo de 1000 × 600. Comprobar que la composición conserve márgenes y proporciones al reducir el espacio disponible. | Media | Pendiente de comprobación visual |
+| VIS-13 | Equipo | La ventana tiene un tamaño mínimo de 900 × 600 y la tabla contiene varias columnas. Comprobar que textos, estados y acciones no queden cortados. | Media | Pendiente de comprobación visual |
+| VIS-14 | Etiquetas | La composición de dos columnas utiliza anchuras y separaciones definidas. Comprobar que la selección de productos y las etiquetas de vista previa no se corten al cambiar el tamaño de la ventana. | Media | Pendiente de comprobación visual |
+| VIS-15 | Stock | La tabla contiene siete columnas. Comprobar su distribución horizontal y la legibilidad de los encabezados y valores. | Media | Pendiente de comprobación visual |
+| VIS-16 | Trazabilidad | Comprobar que la tabla de movimientos, los filtros y los encabezados mantengan una distribución legible al tamaño mínimo. | Media | Pendiente de comprobación visual |
+| VIS-17 | Mapa de almacén | Comprobar la alineación de las celdas, el contraste de los colores, la legibilidad de las etiquetas de pasillos y la claridad de la leyenda. | Media | Pendiente de comprobación visual |
+| VIS-18 | Alertas | Comprobar la jerarquía visual entre los resúmenes numéricos, las tarjetas de alertas y las acciones disponibles. | Media | Pendiente de comprobación visual |
+| VIS-19 | Chat | Comprobar la distribución de canales, conversación y zona de escritura para evitar que alguna sección pierda espacio o legibilidad. | Media | Pendiente de comprobación visual |
+| VIS-20 | Login | Comprobar la alineación del formulario, la legibilidad de los campos y la jerarquía visual entre el acceso y la recuperación de contraseña. | Media | Pendiente de comprobación visual |
+
+## 4.3. Revisión por pantalla
+
+### 4.3.1. Login
+
+**Aspectos que revisar:**
+- Alineación y distribución del formulario.
+- Legibilidad de los campos de correo y contraseña.
+- Jerarquía visual entre el botón principal y la recuperación de contraseña.
+- Coherencia de tipografías, colores y márgenes con el resto de la aplicación.
+
+**Estado:** pendiente de comprobación visual.
+
+### 4.3.2. Dashboard
+
+**Aspectos que revisar:**
+- Distribución de las tarjetas KPI.
+- Presentación del panel del gráfico.
+- Espaciado entre los elementos y la barra lateral.
+- Adaptación de la composición al tamaño mínimo de la ventana.
+
+**Observación:** decidir si el espacio del gráfico debe permanecer vacío o mostrar datos de ejemplo.
+
+### 4.3.3. Mapa de almacén
+
+**Aspectos que revisar:**
+- Alineación y separación de las celdas.
+- Contraste entre los colores utilizados.
+- Legibilidad de las etiquetas de pasillos y zonas.
+- Claridad de la leyenda.
+- Ajuste del mapa al espacio disponible.
+
+**Estado:** pendiente de comprobación visual.
+
+### 4.3.4. Stock
+
+**Aspectos que revisar:**
+- Distribución y legibilidad de las siete columnas.
+- Presentación de los niveles de existencias.
+- Consistencia de los nombres y textos.
+- Adaptación de la tabla al tamaño de la ventana.
+
+**Observación:** corregir «Almacen Central» por «Almacén Central».
+
+### 4.3.5. Trazabilidad
+
+**Aspectos que revisar:**
+- Legibilidad de la tabla de movimientos.
+- Distribución de los filtros y encabezados.
+- Consistencia de los nombres y textos.
+- Adaptación al tamaño mínimo de la ventana.
+
+**Observación:** corregir «Almacen Central» por «Almacén Central».
+
+### 4.3.6. Agenda
+
+**Aspectos que revisar:**
+- Distribución de los días y la cuadrícula semanal.
+- Legibilidad de los encabezados.
+- Espaciado entre las secciones.
+- Presentación de eventos, si se decide incluir datos de ejemplo.
+
+**Observación:** confirmar si el calendario vacío es intencional.
+
+### 4.3.7. Alertas
+
+**Aspectos que revisar:**
+- Jerarquía visual de los contadores.
+- Diferenciación entre tipos de alertas.
+- Legibilidad de los datos de los productos.
+- Coherencia visual entre las tarjetas y las acciones disponibles.
+
+**Estado:** pendiente de comprobación visual.
+
+### 4.3.8. Chat
+
+**Aspectos que revisar:**
+- Distribución de canales y conversación.
+- Legibilidad de los mensajes.
+- Presentación del campo de escritura.
+- Diferenciación entre textos orientativos y contenido real.
+- Adaptación al tamaño mínimo de la ventana.
+
+### 4.3.9. Equipo
+
+**Aspectos que revisar:**
+- Coherencia entre el contador de miembros y los registros mostrados.
+- Presentación de las filas vacías.
+- Legibilidad de las columnas y los estados de fichaje.
+- Consistencia del formato de las horas.
+
+**Observaciones:**
+- Revisar el contador de miembros y los registros visibles.
+- Corregir el texto `Fichado (07:10` para cerrar el paréntesis.
+
+### 4.3.10. Etiquetas
+
+**Aspectos que revisar:**
+- Coherencia entre el número de productos seleccionados y el subtítulo.
+- Presentación de la lista de productos.
+- Aspecto de los códigos de barras de la vista previa.
+- Diferenciación del texto orientativo del buscador.
+- Adaptación de las dos columnas al tamaño de la ventana.
+
+**Observaciones:**
+- Revisar el texto fijo «2 productos seleccionados».
+- Valorar si los códigos de barras deben representarse gráficamente.
+- Comprobar la presentación del texto «🔍 Buscar...».
+
+## 4.4. Orden recomendado de corrección
+
+1. **Coherencia del contenido:** corregir las tildes, cerrar el paréntesis y revisar el contador y las filas de Equipo.
+2. **Acabado visual:** revisar los textos orientativos y decidir cómo representar los códigos de barras.
+3. **Consistencia entre pantallas:** unificar nombres, encabezados y textos compartidos.
+4. **Distribución:** comprobar las ventanas a su tamaño mínimo para detectar posibles recortes, solapamientos y problemas de legibilidad.
+5. **Decisiones sobre contenido de ejemplo:** determinar si el Dashboard debe mostrar un gráfico y si la Agenda debe incluir eventos.
+
+## 4.5. Criterios de aceptación visual
+
+La auditoría visual se considerará validada cuando:
+
+- [ ] Los textos estén correctamente escritos y sean coherentes entre pantallas.
+- [ ] Los contadores coincidan con los datos mostrados cuando corresponda.
+- [ ] Los textos orientativos se distingan del contenido real.
+- [ ] Las tablas y tarjetas sean legibles.
+- [ ] No haya componentes cortados o solapados al tamaño mínimo admitido.
+- [ ] Los colores, las tipografías y los márgenes mantengan una apariencia consistente.
+- [ ] Se haya decidido cómo presentar los gráficos, el calendario y los códigos de barras en el prototipo.
+
+## 4.6. Fuera de alcance
+
+En esta fase no se consideran defectos:
+- Botones que todavía no ejecutan acciones.
+- Filtros que todavía no modifican los resultados.
+- Navegación entre pantallas aún no implementada.
+- Acciones que dependan de lógica funcional pendiente.
+
+Estos aspectos podrán revisarse en una fase posterior de pruebas funcionales.
+
+## 4.7. Conclusión
+
+La revisión estática identifica ajustes de coherencia textual y presentación que conviene resolver antes de validar el prototipo. También quedan pendientes comprobaciones de distribución y legibilidad que requieren ejecutar la aplicación y observar las ventanas reales.
+
+**Estado general:** auditoría estática realizada; validación visual en ejecución pendiente.
 
 ## 5. Validación y ajustes
 
