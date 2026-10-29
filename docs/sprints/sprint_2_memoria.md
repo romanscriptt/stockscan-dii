@@ -229,19 +229,76 @@ Barra lateral fija (≈210 px), contenido con márgenes de ≈32 px y espaciado 
 
 ## 3. Implementación
 
-> Introducir aquí la parte de Implementación (introducción general, si procede).
+La fase de implementación traslada las especificaciones de diseño y las directrices de accesibilidad a código Java ejecutable sobre el entorno Swing. Para ello, se ha desarrollado una arquitectura modular basada en el patrón Modelo-Vista-Controlador (MVC), donde la interfaz gráfica queda desacoplada de la lógica de negocio y de los mecanismos de almacenamiento.
+
+El desarrollo se ha estructurado en torno a una ventana contenedora principal (`MainFrame`) con una resolución de $1000 \times 600\text{ px}$, sobre la que se intercalan dinámicamente los 9 paneles del sistema mediante un contenedor de tipo `CardLayout`, junto a una pantalla independiente de autenticación (`LoginFrame`).
+
+---
 
 ### 3.1. Desarrollar componentes visuales e interactivos
 
-> Introducir aquí la parte de desarrollo de componentes visuales e interactivos.
+Para garantizar la homogeneidad de la interfaz y acelerar el desarrollo con el editor visual NetBeans Matisse, se han categorizado y parametrizado los componentes gráficos clave de la aplicación:
+
+#### Botones (`JButton`)
+Se han configurado tres variantes estilísticas adaptadas a la paleta corporativa:
+* **Botón primario:** Fondo azul (`#1B4F72`) con texto blanco para acciones destacadas (ej. `+ Añadir producto` o `Confirmar`).
+* **Botones del menú lateral (`panelSidebar`):** Fondo azul oscuro (`#121E2B`), sin pintado de foco (`focusPainted = false`) y alineación a la izquierda para garantizar una lectura limpia del menú de navegación.
+* **Botones de acción contextual:** Fondos suaves o neutros para tareas secundarias como exportar o aplicar filtros.
+
+#### Tablas de datos (`JTable`)
+Las tablas principales (`tblProductosStock`, `tblTrazabilidad`, etc.) se han implementado sobre un modelo `DefaultTableModel` con la edición de celdas deshabilitada (`isCellEditable = false`) para evitar modificaciones accidentales. Cuentan con selección por fila única (`SINGLE_SELECTION`), cabeceras con estilo personalizado y renderizadores de celda específicos para los indicadores de estado (`[OK]`, `[BAJO]`, `[SIN STOCK]`).
+
+#### Campos de entrada y desplegables (`JTextField` y `JComboBox`)
+Se han homogeneizado las cajas de texto con la tipografía del sistema (`SansSerif` de 12 px) y bordes neutros. En los desplegables de filtrado por categoría o ubicación se han utilizado modelos genéricos (`DefaultComboBoxModel`), facilitando la carga dinámica de datos desde la base de datos.
+
+#### Menú lateral fijo (`panelSidebar`)
+Diseñado con unas dimensiones fijas de $220 \times 600\text{ px}$, el panel lateral integra los accesos directos a las 9 secciones, la tarjeta de perfil del usuario conectado y etiquetas dinámicas (`lblBadgeAlertas`, `lblBadgeChat`) que actúan como contadores de avisos pendientes.
+
+---
 
 ### 3.2. Implementar eventos y acciones de los componentes
 
-> Introducir aquí la parte de implementación de eventos y acciones de los componentes.
+La capa interactiva de la aplicación gestiona la respuesta del sistema ante las acciones del usuario, aplicando controladores de eventos desacoplados según el tipo de interacción:
+
+#### Navegación entre vistas
+Los botones de la barra lateral escuchan eventos de tipo `ActionListener`. Al hacer clic en una sección, el controlador conmuta la vista activa en el `CardLayout` del contenedor central sin necesidad de instanciar de nuevo los paneles, optimizando el uso de memoria.
+
+#### Búsqueda y filtrado reactivo
+Para los campos de búsqueda (`txtBuscarStock`, `txtBuscarTraza`), se ha implementado un `DocumentListener` vinculado al `TableRowSorter` de cada tabla. Esto permite que los datos se filtren en tiempo real a medida que el usuario escribe, sin necesidad de pulsar un botón de confirmación o la tecla Enter.
+
+#### Control de estados en la interfaz (UI/UX)
+Para evitar errores de operación, los botones contextuales como *Editar*, *Eliminar* o *Imprimir Etiqueta* permanecen desactivados (`setEnabled(false)`) por defecto. Se ha vinculado un `ListSelectionListener` a las tablas que detecta cuándo hay una fila seleccionada, activando únicamente en ese momento las acciones correspondientes.
+
+#### Mensajería y alertas
+Las acciones críticas o los fallos de validación disparan alertas inmediatas mediante cuadros de diálogo `JOptionPane` o actualizaciones de texto en las barras de estado inferiores, asegurando que el usuario reciba confirmación visual de cada operación.
+
+---
 
 ### 3.3. Definir la secuencia de control y la persistencia de datos
 
-> Introducir aquí la parte de secuencia de control y persistencia de datos.
+#### Secuencia de control y flujo de navegación
+La aplicación gestiona las interacciones a través de una jerarquía clara de dos niveles:
+1. **Nivel principal:** Navegación directa entre las 9 secciones desde el menú lateral.
+2. **Nivel secundario:** Diálogos modales (`JDialog`) lanzados desde las pantallas principales para tareas específicas (alta de productos, registro de entradas o confirmación de traspasos).
+
+El flujo operativo estándar de gestión de mercancía sigue el ciclo **Escanear > Confirmar > Actualizar**:
+* **Escanear:** Entrada del código por pistola o teclado en la interfaz.
+* **Confirmar:** Validación de datos (cantidad $>0$, stock suficiente en origen) en un diálogo modal.
+* **Actualizar:** Ejecución de la operación y refresco automático de las tablas de la interfaz.
+
+En caso de error (credenciales incorrectas, código no registrado o cantidad no válida), el sistema detiene el flujo, resalta el campo afectado y muestra un mensaje explicativo sin perder la información introducida.
+
+#### Persistencia de datos
+El almacenamiento de la información se divide en dos capas según la naturaleza de los datos:
+
+1. **Base de Datos Relacional (`SQLite` mediante Capa DAO):**
+   Toda la información operativa del almacén (productos, ubicaciones, historial de trazabilidad, usuarios, turnos y mensajes) se gestiona a través de objetos de acceso a datos (DAO). Las operaciones de escritura se ejecutan de forma inmediata al confirmar cada acción en la interfaz, garantizando la integridad referencial mediante transacciones SQL (`COMMIT` / `ROLLBACK`).
+   
+2. **Configuración Local (`Preferences API`):**
+   Los datos de entorno y preferencias de usuario (coordenadas $x, y$ y tamaño de la ventana, últimos filtros aplicados y orden de columnas de las tablas) se almacenan localmente mediante la API `java.util.prefs.Preferences`. Estos datos se guardan al cerrar la aplicación o cambiar un ajuste, restaurándose automáticamente en la siguiente sesión.
+
+#### Tratamiento de datos personales (RGPD)
+Los datos de los operarios almacenados en la base de datos (nombre, correo corporativo y rol) se limitan a lo estrictamente necesario para la trazabilidad del inventario. Las contraseñas se guardan encriptadas mediante algoritmos de hashing seguro con *salt* (`BCrypt`), y el acceso a la gestión de usuarios queda restringido exclusivamente a perfiles con rol de Administrador.
 
 ---
 
