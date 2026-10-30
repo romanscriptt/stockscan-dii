@@ -934,19 +934,6 @@ El flujo operativo estándar de gestión de mercancía sigue el ciclo **Escanear
 * **Actualizar:** Ejecución de la operación y refresco automático de las tablas de la interfaz.
 
 En caso de error (credenciales incorrectas, código no registrado o cantidad no válida), el sistema detiene el flujo, resalta el campo afectado y muestra un mensaje explicativo sin perder la información introducida.
-
-#### Persistencia de datos
-El almacenamiento de la información se divide en dos capas según la naturaleza de los datos:
-
-1. **Base de Datos Relacional (`SQLite` mediante Capa DAO):**
-   Toda la información operativa del almacén (productos, ubicaciones, historial de trazabilidad, usuarios, turnos y mensajes) se gestiona a través de objetos de acceso a datos (DAO). Las operaciones de escritura se ejecutan de forma inmediata al confirmar cada acción en la interfaz, garantizando la integridad referencial mediante transacciones SQL (`COMMIT` / `ROLLBACK`).
-   
-2. **Configuración Local (`Preferences API`):**
-   Los datos de entorno y preferencias de usuario (coordenadas $x, y$ y tamaño de la ventana, últimos filtros aplicados y orden de columnas de las tablas) se almacenan localmente mediante la API `java.util.prefs.Preferences`. Estos datos se guardan al cerrar la aplicación o cambiar un ajuste, restaurándose automáticamente en la siguiente sesión.
-
-#### Tratamiento de datos personales (RGPD)
-Los datos de los operarios almacenados en la base de datos (nombre, correo corporativo y rol) se limitan a lo estrictamente necesario para la trazabilidad del inventario. Las contraseñas se guardan encriptadas mediante algoritmos de hashing seguro con *salt* (`BCrypt`), y el acceso a la gestión de usuarios queda restringido exclusivamente a perfiles con rol de Administrador.
-
 ---
 
 ## 4. Pruebas y auditoría
