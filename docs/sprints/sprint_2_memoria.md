@@ -1,5 +1,11 @@
 # Memoria final Sprint 2 – StockScan SGE
 
+## Coevaluación:
+- Carmen Monge: 90%
+- Álvaro López: 90%
+- Ángel Luis: 80%
+- Elena Sáez: 90%
+  
 ## 1. Análisis y planificación
 
 Fase inicial del proyecto. Se estudia el problema, qué necesitan los usuarios y qué soluciones existen ya, y con ello se definen los requisitos, el alcance y la organización del trabajo (tareas, responsables y plazos). Lo que se decide aquí marca el resto de fases.
