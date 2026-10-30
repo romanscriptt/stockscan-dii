@@ -3,7 +3,7 @@
 ## Coevaluación:
 - Carmen Monge: 90%
 - Álvaro López: 90%
-- Ángel Luis: 80%
+- Ángel Luis: 90%
 - Elena Sáez: 90%
   
 ## 1. Análisis y planificación
