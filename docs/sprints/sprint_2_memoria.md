@@ -1,10 +1,15 @@
 # Memoria final Sprint 2 – StockScan SGE
 
-## Coevaluación:
-- Carmen Monge: 90%
-- Álvaro López: 90%
-- Ángel Luis: 90%
-- Elena Sáez: 90%
+
+## **Componentes del Grupo y coevaluación:**
+- **Álvaro López** 90%  
+- **Carmen Monge** 90%  
+- **Elena Sáez** 90%  
+- **Ángel Luis** 90%
+
+**Tutor:** Willman Acosta Lugo  
+**Ciclo Formativo:** Desarrollo de Aplicaciones Multiplataforma (DAM)  
+**Fecha:** 30/10/2026
   
 ## 1. Análisis y planificación
 
