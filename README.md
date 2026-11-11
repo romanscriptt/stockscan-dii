@@ -10,7 +10,7 @@ Somos un equipo multidisciplinar de desarrolladores e ingenieros de software ori
 
 **Miembros del grupo:**
 * **Álvaro López** 
-* **Ángel Monge**
+* **Carmen Monge**
 * **Elena Sáez**
 * **Ángel Luis Sánchez**
 
